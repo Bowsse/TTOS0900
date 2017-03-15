@@ -18,13 +18,22 @@ ${CONTACT BUTTON}      id('login-button')
 
 *** Keywords ***
 Open Browser To Front Page
-    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Open Browser    ${FRONTPAGE URL}    ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
     Front Page Should Be Open
+    
+Open Browser To Login Page
+    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Maximize Browser Window
+    Set Selenium Speed    ${DELAY}
+    Login Page Should Be Open
 
 Front Page Should Be Open
-    Url Should Be    https://www.lupapiste.fi/
+    Url Should Be    ${SERVER}
+    
+Login Page Should Be Open
+    Url Should Be    ${LOGIN PAGE}
     
 Go To Login Page
   Go To       ${LOGIN URL}
