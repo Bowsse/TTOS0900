@@ -14,7 +14,7 @@ ${DELAY}          0
 ${LUVANHAKIJA URL}    http://${SERVER}/luvanhakija
 ${CONTACT URL}      http://${SERVER}/ota-yhteytta
 ${LOGIN URL}         http://${SERVER}/kirjaudu
-${CONTACT BUTTON}      id('login-button')
+${CONTACT BUTTON}      id('register')/x:div/x:div/x:div[3]/x:p[2]/x:a
 
 *** Keywords ***
 Open Browser To Front Page
