@@ -10,7 +10,7 @@ Library           Selenium2Library
 ${SERVER}         https://www.lupapiste.fi/
 ${FRONTPAGE URL}     https://www.lupapiste.fi/
 ${BROWSER}        Firefox
-${DELAY}          0
+${DELAY}          2
 ${LUVANHAKIJA URL}    http://${SERVER}/luvanhakija
 ${CONTACT URL}      http://${SERVER}/ota-yhteytta
 ${LOGIN URL}         http://${SERVER}/kirjaudu
@@ -31,19 +31,19 @@ Open Browser To Login Page
     Login Page Should Be Open
 
 Front Page Should Be Open
-    Url Should Be    ${SERVER}
+    Location Should Be    ${SERVER}
     
 Contact Page Should Be Open
-    Url Should Be    ${CONTACT PAGE}
+    Location Should Be    ${CONTACT PAGE}
     
 Login Page Should Be Open
     Url Should Be    ${LOGIN PAGE}
     
 Go To Login Page
   Go To       ${LOGIN URL}
-  Url Should Be      https://www.lupapiste.fi/kirjaudu
+  Location Should Be      https://www.lupapiste.fi/kirjaudu
   
 Search For Help
   Click Element     ${SEARCH BUTTON}
   Input Text   search-field     Apua
-  Url Should Be     ${SERVER}/?s=Apua
+  Location Should Be     ${SERVER}/?s=Apua
