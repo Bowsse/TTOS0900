@@ -32,6 +32,9 @@ Open Browser To Login Page
 Front Page Should Be Open
     Url Should Be    ${SERVER}
     
+Contact Page Should Be Open
+    Url Should Be    ${CONTACT PAGE}
+    
 Login Page Should Be Open
     Url Should Be    ${LOGIN PAGE}
     
