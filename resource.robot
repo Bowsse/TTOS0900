@@ -37,7 +37,7 @@ Contact Page Should Be Open
     Location Should Be    ${CONTACT PAGE}
     
 Login Page Should Be Open
-    Url Should Be    ${LOGIN PAGE}
+    Location Should Be    ${LOGIN PAGE}
     
 Go To Login Page
   Go To       ${LOGIN URL}
