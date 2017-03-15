@@ -15,6 +15,7 @@ ${LUVANHAKIJA URL}    http://${SERVER}/luvanhakija
 ${CONTACT URL}      http://${SERVER}/ota-yhteytta
 ${LOGIN URL}         http://${SERVER}/kirjaudu
 ${CONTACT BUTTON}      id('register')/x:div/x:div/x:div[3]/x:p[2]/x:a
+${SEARCH BUTTON}       id('top-bar')/x:div/x:div/x:div[3]/x:ul[2]/x:li[1]/x:a/x:span[2]
 
 *** Keywords ***
 Open Browser To Front Page
@@ -41,3 +42,8 @@ Login Page Should Be Open
 Go To Login Page
   Go To       ${LOGIN URL}
   Url Should Be      https://www.lupapiste.fi/kirjaudu
+  
+Search For Help
+  Click Element     ${SEARCH BUTTON}
+  Input Text   search-field     Apua
+  Url Should Be     ${SERVER}/?s=Apua
